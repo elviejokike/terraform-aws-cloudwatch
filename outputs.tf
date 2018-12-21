@@ -27,10 +27,10 @@ output "amazon_linux_cloudinit_ec2_part" {
 
 output "log_group_name" {
   description = "Name of the created log group. If not created an empty string is returned."
-  value       = "${element(concat(aws_cloudwatch_log_group.log_group.*.name, list("")), 0)}"
+  value       = "${local.log_group_name}"
 }
 
 output "log_group_arn" {
   description = "Arn of the created log group. If not created an empty string is returned."
-  value       = "${element(concat(aws_cloudwatch_log_group.log_group.*.arn, list("")), 0)}"
+  value       = "${aws_cloudwatch_log_group.log_group.arn}"
 }

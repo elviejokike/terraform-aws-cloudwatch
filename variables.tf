@@ -5,6 +5,7 @@ variable "environment" {
 
 variable "name_suffix" {
   type        = "string"
+  default     = ""
   description = "Logical name to append to the log group name."
 }
 
@@ -17,4 +18,10 @@ variable "tags" {
   type        = "map"
   description = "A map of tags to add to the resources"
   default     = {}
+}
+
+variable "name_prefix" {
+  type        = "string"
+  description = "Logical name prefix to append to the log group name."
+  default     = ""
 }

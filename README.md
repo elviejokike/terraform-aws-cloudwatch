@@ -49,7 +49,8 @@ data "template_cloudinit_config" "config" {
 |------|-------------|:----:|:-----:|:-----:|
 | create_log_group | Indicates if the log group needs to be created by the module. | string | `true` | no |
 | environment | Logical name of the environment, will be used as prefix and for tagging. | string | - | yes |
-| name_suffix | Logical name to append to the log group name. | string | - | yes |
+| name_suffix | Logical name to append to the log group name. | string | - | false |
+| name_prefix | Logical name to append to the log group name as prefix. | string | - | false |
 | tags | A map of tags to add to the resources | map | `<map>` | no |
 
 ## Outputs
